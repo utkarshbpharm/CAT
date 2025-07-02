@@ -1,1 +1,143 @@
 # CAT
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CAT 2028</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .nav a {
+      display: inline-block;
+      margin: 0 20px;
+      font-size: 24px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .nav a:hover {
+      color: #007BFF;
+    }
+
+    .content {
+      margin-top: 30px;
+      width: 80%;
+      max-width: 800px;
+      text-align: left;
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title">CAT 2028 🧠</div>
+
+  <div class="nav">
+    <a onclick="showContent('home')">Home</a>
+    <a onclick="showContent('syllabus')">Syllabus</a>
+    <a onclick="showContent('college')">College</a>
+  </div>
+
+  <div class="content" id="contentBox">
+    Click on any tab above to see details.
+  </div>
+
+  <script>
+    function showContent(tab) {
+      let content = "";
+
+      if (tab === 'home') {
+        content = `
+          <h2>About CAT Exam</h2>
+          <p>The Common Admission Test (CAT) is a national-level entrance exam for MBA/PGDM programs in top Indian B-schools including the IIMs.</p>
+          <ul>
+            <li>Conducted once a year (usually in November)</li>
+            <li>Computer-based test (CBT)</li>
+            <li>Divided into 3 sections</li>
+          </ul>
+          <p><strong>Sections:</strong></p>
+          <ol>
+            <li>Verbal Ability and Reading Comprehension (VARC)</li>
+            <li>Data Interpretation and Logical Reasoning (DILR)</li>
+            <li>Quantitative Ability (QA)</li>
+          </ol>
+        `;
+      } else if (tab === 'syllabus') {
+        content = `
+          <h2>CAT 2028 Syllabus</h2>
+          <p><strong>Verbal Ability and Reading Comprehension (VARC):</strong></p>
+          <ul>
+            <li>Reading Comprehension (RC)</li>
+            <li>Para Jumbles</li>
+            <li>Summary Writing</li>
+            <li>Sentence Completion</li>
+          </ul>
+          <p><strong>Data Interpretation & Logical Reasoning (DILR):</strong></p>
+          <ul>
+            <li>Graphs, Charts, Tables</li>
+            <li>Seating Arrangement</li>
+            <li>Puzzles</li>
+            <li>Blood Relations, Directions</li>
+          </ul>
+          <p><strong>Quantitative Aptitude (QA):</strong></p>
+          <ul>
+            <li>Arithmetic: Ratio, Time, Work, Profit & Loss</li>
+            <li>Algebra</li>
+            <li>Geometry & Mensuration</li>
+            <li>Number System</li>
+            <li>Modern Math (Set theory, Probability)</li>
+          </ul>
+        `;
+      } else if (tab === 'college') {
+        content = `
+          <h2>Top Colleges Accepting CAT</h2>
+          <p>Here are some of the premier institutes:</p>
+          <ol>
+            <li>IIM Ahmedabad</li>
+            <li>IIM Bangalore</li>
+            <li>IIM Calcutta</li>
+            <li>IIM Lucknow</li>
+            <li>IIM Indore</li>
+            <li>IIM Kozhikode</li>
+            <li>FMS Delhi</li>
+            <li>MDI Gurgaon</li>
+            <li>SPJIMR Mumbai</li>
+            <li>IMT Ghaziabad</li>
+            <li>IITs (for MBA)</li>
+          </ol>
+        `;
+      }
+
+      document.getElementById("contentBox").innerHTML = content;
+    }
+  </script>
+
+</body>
+</html>
